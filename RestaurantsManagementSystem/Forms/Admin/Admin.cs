@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantsManagementSystem;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,13 @@ namespace Presentation.Forms.Admin
         private void btnManageEmployee_Click(object sender, EventArgs e)
         {
             panelManageEmployee.Visible = true;
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
     }
 }

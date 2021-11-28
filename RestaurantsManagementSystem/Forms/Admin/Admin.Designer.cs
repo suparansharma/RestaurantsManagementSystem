@@ -30,15 +30,15 @@ namespace Presentation.Forms.Admin
         private void InitializeComponent()
         {
             this.panelAdminTop = new System.Windows.Forms.Panel();
-            this.panelAdminLeft = new System.Windows.Forms.Panel();
-            this.panelAdminMain = new System.Windows.Forms.Panel();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.btnManageEmployee = new System.Windows.Forms.Button();
-            this.panelManageEmployee = new System.Windows.Forms.Panel();
-            this.btnManager = new System.Windows.Forms.Button();
-            this.btnChef = new System.Windows.Forms.Button();
-            this.btnManageFood = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.panelAdminLeft = new System.Windows.Forms.Panel();
+            this.btnManageFood = new System.Windows.Forms.Button();
+            this.panelManageEmployee = new System.Windows.Forms.Panel();
+            this.btnChef = new System.Windows.Forms.Button();
+            this.btnManager = new System.Windows.Forms.Button();
+            this.btnManageEmployee = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.panelAdminMain = new System.Windows.Forms.Panel();
             this.panelAdminTop.SuspendLayout();
             this.panelAdminLeft.SuspendLayout();
             this.panelManageEmployee.SuspendLayout();
@@ -53,6 +53,16 @@ namespace Presentation.Forms.Admin
             this.panelAdminTop.Size = new System.Drawing.Size(931, 75);
             this.panelAdminTop.TabIndex = 0;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(791, 29);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // panelAdminLeft
             // 
             this.panelAdminLeft.Controls.Add(this.btnManageFood);
@@ -65,23 +75,45 @@ namespace Presentation.Forms.Admin
             this.panelAdminLeft.Size = new System.Drawing.Size(200, 422);
             this.panelAdminLeft.TabIndex = 1;
             // 
-            // panelAdminMain
+            // btnManageFood
             // 
-            this.panelAdminMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAdminMain.Location = new System.Drawing.Point(200, 75);
-            this.panelAdminMain.Name = "panelAdminMain";
-            this.panelAdminMain.Size = new System.Drawing.Size(731, 422);
-            this.panelAdminMain.TabIndex = 2;
+            this.btnManageFood.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageFood.Location = new System.Drawing.Point(0, 172);
+            this.btnManageFood.Name = "btnManageFood";
+            this.btnManageFood.Size = new System.Drawing.Size(200, 36);
+            this.btnManageFood.TabIndex = 3;
+            this.btnManageFood.Text = "Manage Food";
+            this.btnManageFood.UseVisualStyleBackColor = true;
             // 
-            // btnDashboard
+            // panelManageEmployee
             // 
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 0);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(200, 36);
-            this.btnDashboard.TabIndex = 0;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.panelManageEmployee.Controls.Add(this.btnChef);
+            this.panelManageEmployee.Controls.Add(this.btnManager);
+            this.panelManageEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelManageEmployee.Location = new System.Drawing.Point(0, 72);
+            this.panelManageEmployee.Name = "panelManageEmployee";
+            this.panelManageEmployee.Size = new System.Drawing.Size(200, 100);
+            this.panelManageEmployee.TabIndex = 2;
+            // 
+            // btnChef
+            // 
+            this.btnChef.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChef.Location = new System.Drawing.Point(0, 23);
+            this.btnChef.Name = "btnChef";
+            this.btnChef.Size = new System.Drawing.Size(200, 23);
+            this.btnChef.TabIndex = 1;
+            this.btnChef.Text = "Chef";
+            this.btnChef.UseVisualStyleBackColor = true;
+            // 
+            // btnManager
+            // 
+            this.btnManager.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManager.Location = new System.Drawing.Point(0, 0);
+            this.btnManager.Name = "btnManager";
+            this.btnManager.Size = new System.Drawing.Size(200, 23);
+            this.btnManager.TabIndex = 0;
+            this.btnManager.Text = "Manager";
+            this.btnManager.UseVisualStyleBackColor = true;
             // 
             // btnManageEmployee
             // 
@@ -94,54 +126,23 @@ namespace Presentation.Forms.Admin
             this.btnManageEmployee.UseVisualStyleBackColor = true;
             this.btnManageEmployee.Click += new System.EventHandler(this.btnManageEmployee_Click);
             // 
-            // panelManageEmployee
+            // btnDashboard
             // 
-            this.panelManageEmployee.Controls.Add(this.btnChef);
-            this.panelManageEmployee.Controls.Add(this.btnManager);
-            this.panelManageEmployee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelManageEmployee.Location = new System.Drawing.Point(0, 72);
-            this.panelManageEmployee.Name = "panelManageEmployee";
-            this.panelManageEmployee.Size = new System.Drawing.Size(200, 100);
-            this.panelManageEmployee.TabIndex = 2;
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 0);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(200, 36);
+            this.btnDashboard.TabIndex = 0;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
             // 
-            // btnManager
+            // panelAdminMain
             // 
-            this.btnManager.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManager.Location = new System.Drawing.Point(0, 0);
-            this.btnManager.Name = "btnManager";
-            this.btnManager.Size = new System.Drawing.Size(200, 23);
-            this.btnManager.TabIndex = 0;
-            this.btnManager.Text = "Manager";
-            this.btnManager.UseVisualStyleBackColor = true;
-            // 
-            // btnChef
-            // 
-            this.btnChef.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnChef.Location = new System.Drawing.Point(0, 23);
-            this.btnChef.Name = "btnChef";
-            this.btnChef.Size = new System.Drawing.Size(200, 23);
-            this.btnChef.TabIndex = 1;
-            this.btnChef.Text = "Chef";
-            this.btnChef.UseVisualStyleBackColor = true;
-            // 
-            // btnManageFood
-            // 
-            this.btnManageFood.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageFood.Location = new System.Drawing.Point(0, 172);
-            this.btnManageFood.Name = "btnManageFood";
-            this.btnManageFood.Size = new System.Drawing.Size(200, 36);
-            this.btnManageFood.TabIndex = 3;
-            this.btnManageFood.Text = "Manage Food";
-            this.btnManageFood.UseVisualStyleBackColor = true;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(791, 29);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 0;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.panelAdminMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAdminMain.Location = new System.Drawing.Point(200, 75);
+            this.panelAdminMain.Name = "panelAdminMain";
+            this.panelAdminMain.Size = new System.Drawing.Size(731, 422);
+            this.panelAdminMain.TabIndex = 2;
             // 
             // Admin
             // 

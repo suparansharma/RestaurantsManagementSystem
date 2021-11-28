@@ -15,7 +15,7 @@ namespace Database
 
         public DataAccess()
         {
-            ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Restaurants_Management_System\RestaurantsManagementSystem\DataAccess\rms.mdf;Integrated Security=True;Connect Timeout=30";
+            ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Restaurants_Management_System\RestaurantsManagementSystem\Database\rms.mdf;Integrated Security=True;Connect Timeout=30";
         }
 
         public SqlCommand GetCommand(string sqlQuery)
