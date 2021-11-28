@@ -76,6 +76,7 @@ namespace Presentation.Forms.Admin
             if (isEmplyeeUpdate)
             {
                 MessageBox.Show("Upadte Successfully");
+                LoadData();
             }
 
             else
@@ -92,6 +93,7 @@ namespace Presentation.Forms.Admin
             if (isDeleteUser && isDeleteEmployee)
             {
                 MessageBox.Show("Delete Successfully");
+                LoadData();
             }
 
             else
