@@ -40,6 +40,14 @@ namespace Database
             return dt;
         }
 
+        private int ExecuteComand(string sql)
+        {
+            SqlCommand command = GetCommand(sql);
+            command.Connection.Open();
+            int rowsAffected = command.ExecuteNonQuery();
+            return rowsAffected;
+        }
+
         public User LoginAccess(string userId, string password)
         {
             string sql = "select * " +
@@ -61,6 +69,21 @@ namespace Database
                 return null;
             }
 
+        }
+
+        public bool InsertUser(string userId, string password, int userType)
+        {
+            string sql = string.Format("insert into tblUsers(userId,password,userType)" +
+                "Values('{0}', '{1}', '{2}')", userId, password, userType);
+            int rowsAffected = ExecuteComand(sql);
+            if (rowsAffected > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

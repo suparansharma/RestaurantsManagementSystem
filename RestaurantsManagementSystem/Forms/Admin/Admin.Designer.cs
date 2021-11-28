@@ -114,6 +114,7 @@ namespace Presentation.Forms.Admin
             this.btnManager.TabIndex = 0;
             this.btnManager.Text = "Manager";
             this.btnManager.UseVisualStyleBackColor = true;
+            this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
             // 
             // btnManageEmployee
             // 

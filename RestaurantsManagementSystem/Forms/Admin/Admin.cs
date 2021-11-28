@@ -21,7 +21,7 @@ namespace Presentation.Forms.Admin
 
         private void btnManageEmployee_Click(object sender, EventArgs e)
         {
-            panelManageEmployee.Visible = true;
+            ControlSubMenu(panelManageEmployee);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -29,6 +29,39 @@ namespace Presentation.Forms.Admin
             Login login = new Login();
             login.Show();
             this.Close();
+        }
+        private void ControlSubMenu(Panel panel)
+        {
+            if (panel.Visible == true)
+            {
+                panel.Visible = false;
+            }
+            else
+            {
+                panel.Visible = true;
+            }
+
+        }
+
+
+        private Form activeFrom = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeFrom != null)
+                activeFrom.Close();
+            activeFrom = childForm;
+            childForm.TopLevel = false;
+            childForm.Dock = DockStyle.Fill;
+            panelAdminMain.Controls.Add(childForm);
+            panelAdminMain.Tag = childForm;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void btnManager_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ManageManager());
         }
     }
 }
