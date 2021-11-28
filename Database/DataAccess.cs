@@ -86,6 +86,19 @@ namespace Database
                 return false;
             }
         }
+        public bool DeleteUser(string userId)
+        {
+            string query = "DELETE FROM tblUsers  where userId ='" + userId + "' ";
+            int rowsAffected = ExecuteComand(query);
+            if (rowsAffected > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
 
 
@@ -115,6 +128,32 @@ namespace Database
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridView.DataSource = dt;
+        }
+        public bool UpdateEmploye(string userId, string firstName, string lastName, string gender, string phoneNumber, string email,int salary)
+        {
+            string query = "UPDATE tblEmployees SET firstName= '" + firstName + "', lastName= '" + lastName + "', gender= '" + gender + "',phoneNumber= '" + phoneNumber + "', email= '" + email + "',salary= '" + salary + "' WHERE userId ='" + userId + "' ";
+            int rowsAffected = ExecuteComand(query);
+            if (rowsAffected > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool DeleteEmployee(string userId)
+        {
+            string query = "DELETE FROM tblEmployees  WHERE userId ='" + userId + "' ";
+            int rowsAffected = ExecuteComand(query);
+            if (rowsAffected > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         public void GetAllEmployeeByUserType(DataGridView dataGridView, int userType)
         {
