@@ -85,5 +85,24 @@ namespace Database
                 return false;
             }
         }
+
+
+
+        public bool InsertEmployee(string userId, string firstName, string lastName, string gender, string phoneNumber, string email, string joinDate, int salary, int userType, string timeShedule)
+        {
+            string sql = string.Format("insert into tblEmployees(userId,firstName,lastName,gender,phoneNumber,email,joinDate,salary,userType,timeShedule)" +
+                "Values('{0}', '{1}', '{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')", userId, firstName, lastName, gender, phoneNumber, email, joinDate, salary, userType, timeShedule);
+            int rowsAffected = ExecuteComand(sql);
+            if (rowsAffected > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
     }
 }

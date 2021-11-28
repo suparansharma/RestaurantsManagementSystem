@@ -36,6 +36,7 @@ namespace Presentation.Forms.Admin
         private void btnAddManager_Click(object sender, EventArgs e)
         {
             OpenChildForm(new AddManager());
+            btnAddManager.Enabled = false;
         }
     }
 }
