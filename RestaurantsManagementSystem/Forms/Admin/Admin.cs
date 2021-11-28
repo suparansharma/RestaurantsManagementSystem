@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Presentation.Forms.Admin
+{
+    public partial class Admin : Form
+    {
+        public Admin()
+        {
+            InitializeComponent();
+            panelManageEmployee.Visible = false;
+        }
+
+        private void btnManageEmployee_Click(object sender, EventArgs e)
+        {
+            panelManageEmployee.Visible = true;
+        }
+    }
+}
