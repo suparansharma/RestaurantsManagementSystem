@@ -66,6 +66,7 @@ namespace Presentation.Forms.Admin
             this.btnViewchef.TabIndex = 0;
             this.btnViewchef.Text = "View chef";
             this.btnViewchef.UseVisualStyleBackColor = true;
+            this.btnViewchef.Click += new System.EventHandler(this.btnViewchef_Click);
             // 
             // panelChefMain
             // 

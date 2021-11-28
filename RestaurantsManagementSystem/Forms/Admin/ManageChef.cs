@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Database.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,13 @@ namespace Presentation.Forms.Admin
         private void btnAddChef_Click(object sender, EventArgs e)
         {
             OpenChildForm(new AddChef());
+            btnAddChef.Enabled = false;
+        }
+
+        private void btnViewchef_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ViewEmployee((int)User.UserTypeEnum.Chef));
+
         }
     }
 }

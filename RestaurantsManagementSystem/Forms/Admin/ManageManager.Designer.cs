@@ -56,6 +56,7 @@ namespace Presentation.Forms.Admin
             this.btnViewManager.TabIndex = 1;
             this.btnViewManager.Text = "View Manager";
             this.btnViewManager.UseVisualStyleBackColor = true;
+            this.btnViewManager.Click += new System.EventHandler(this.btnViewManager_Click);
             // 
             // btnAddManager
             // 

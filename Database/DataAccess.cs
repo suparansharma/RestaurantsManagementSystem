@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Database
 {
@@ -101,6 +102,29 @@ namespace Database
             {
                 return false;
             }
+
+        }
+
+
+        public void GetAllEmployee(DataGridView dataGridView)
+        {
+            string query = "Select  * FROM tblEmployees  ";
+            SqlCommand commandd = GetCommand(query);
+            SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView.DataSource = dt;
+        }
+        public void GetAllEmployeeByUserType(DataGridView dataGridView, int userType)
+        {
+            string query = "Select  * FROM tblEmployees where userType = '"+ userType+ "' ";
+            SqlCommand commandd = GetCommand(query);
+            SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView.DataSource = dt;
         }
 
 

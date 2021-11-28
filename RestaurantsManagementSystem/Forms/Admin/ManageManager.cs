@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Database.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,6 +38,11 @@ namespace Presentation.Forms.Admin
         {
             OpenChildForm(new AddManager());
             btnAddManager.Enabled = false;
+        }
+
+        private void btnViewManager_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ViewEmployee((int)User.UserTypeEnum.Manager));
         }
     }
 }
