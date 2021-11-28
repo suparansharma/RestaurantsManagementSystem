@@ -11,7 +11,8 @@ namespace Database.Entities
         public enum UserTypeEnum
         {
             Admin,
-            Manager
+            Manager,
+            Chef
         }
         public string UserId { get; set; }
         public string Password { get; set; }

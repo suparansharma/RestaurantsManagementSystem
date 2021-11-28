@@ -63,5 +63,10 @@ namespace Presentation.Forms.Admin
         {
             OpenChildForm(new ManageManager());
         }
+
+        private void btnChef_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Managechef());
+        }
     }
 }
