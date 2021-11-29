@@ -167,10 +167,10 @@ namespace Database
         }
 
 
-        public bool InsertFood(string foodName, string size, string price, string description)
+        public bool InsertFood(string foodName, string size, int price,string foodType, string description)
         {
-            string sql = string.Format("insert into tblFood(foodName,size,price,description)" +
-                "Values('{0}', '{1}', '{2}','{3}')", foodName, size, price, description);
+            string sql = string.Format("insert into tblFood(foodName,size,price,foodType,description)" +
+                "Values('{0}', '{1}', '{2}','{3}','{4}')", foodName, size, price, foodType, description);
             int rowsAffected = ExecuteComand(sql);
             if (rowsAffected > 0)
             {
@@ -182,6 +182,10 @@ namespace Database
             }
 
         }
+
+
+
+      
 
 
     }

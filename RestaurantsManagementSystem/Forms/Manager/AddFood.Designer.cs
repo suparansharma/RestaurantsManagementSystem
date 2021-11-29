@@ -143,8 +143,9 @@ namespace Presentation.Forms.Manager
             // txtDescription
             // 
             this.txtDescription.Location = new System.Drawing.Point(106, 211);
+            this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(150, 23);
+            this.txtDescription.Size = new System.Drawing.Size(226, 73);
             this.txtDescription.TabIndex = 33;
             // 
             // btnAddFood

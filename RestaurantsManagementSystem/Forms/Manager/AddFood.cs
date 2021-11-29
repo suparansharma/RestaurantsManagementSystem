@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Presentation.Forms.Manager
 {
     public partial class AddFood : Form
     {
+        DataAccess dataAccess = new DataAccess();
         public AddFood()
         {
             InitializeComponent();
@@ -39,6 +41,39 @@ namespace Presentation.Forms.Manager
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
+            string foodType = cbFoodType.Text;
+            string foodName = txtFoodName.Text;
+            string foodSize;
+            if (rbSmall.Checked)
+            {
+                foodSize = "Small";
+            }
+            else if (rbMedium.Checked)
+            {
+                foodSize = "Medium";
+            }
+
+            else
+            {
+                foodSize = "Big";
+            }
+
+            int price = Int32.Parse(txtPrice.Text);
+            string description = txtDescription.Text;
+
+            bool insertFood=dataAccess.InsertFood(foodName, foodSize, price, foodType, description);
+            if (insertFood)
+            {
+                MessageBox.Show("Insert Successfully");
+            }
+
+            else
+            {
+                MessageBox.Show("Unsuccessfull & Try again");
+            }
+
+
+
 
         }
 
