@@ -184,9 +184,47 @@ namespace Database
         }
 
 
+        public bool UpdateFood(int id, string foodName, string Size, int Price, string foodType, string description)
+        {
+            string query = "UPDATE TblFood SET  foodName= '" + foodName + "', Size= '" + Size + "', price= '" + Price + "',foodType= '" + foodType + "', description= '" + description + "' WHERE id ='" + id + "' ";
+            int rowsAffected = ExecuteComand(query);
+            if (rowsAffected > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
-      
 
+
+        public void GetAllFood(DataGridView dataGridView)
+        {
+            string query = "Select  * FROM TblFood  ";
+            SqlCommand commandd = GetCommand(query);
+            SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView.DataSource = dt;
+        }
+
+
+        public bool DeleteFood(int id)
+        {
+            string query = "DELETE FROM TblFood  WHERE id ='" + id + "' ";
+            int rowsAffected = ExecuteComand(query);
+            if (rowsAffected > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 }

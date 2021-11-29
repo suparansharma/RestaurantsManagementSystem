@@ -59,7 +59,7 @@ namespace Presentation.Forms.Manager
             }
 
             int price = Int32.Parse(txtPrice.Text);
-            string description = txtDescription.Text;
+              string description = txtDescription.Text;
 
             bool insertFood=dataAccess.InsertFood(foodName, foodSize, price, foodType, description);
             if (insertFood)

@@ -101,5 +101,36 @@ namespace Presentation.Forms.Admin
                 MessageBox.Show("Unsuccessfull & Try again");
             }
         }
+
+        private void dataGridViewEmployee_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            panelviewemployeedata.Visible = true;
+            var userId = dataGridViewEmployee.SelectedRows[0].Cells[0].Value.ToString();
+            var firstName = dataGridViewEmployee.SelectedRows[0].Cells[1].Value.ToString();
+            var lastName = dataGridViewEmployee.SelectedRows[0].Cells[2].Value.ToString();
+            string gender = dataGridViewEmployee.SelectedRows[0].Cells[3].Value.ToString();
+            var phoneNumber = dataGridViewEmployee.SelectedRows[0].Cells[4].Value.ToString();
+            var email = dataGridViewEmployee.SelectedRows[0].Cells[5].Value.ToString();
+            var joinDate = dataGridViewEmployee.SelectedRows[0].Cells[6].Value.ToString();
+            string salary = dataGridViewEmployee.SelectedRows[0].Cells[7].Value.ToString();
+            var userType = dataGridViewEmployee.SelectedRows[0].Cells[8].Value.ToString();
+            var timeSchedule = dataGridViewEmployee.SelectedRows[0].Cells[9].Value.ToString();
+            txtUserId.Text = userId;
+            txtFirstName.Text = firstName;
+            txtLastName.Text = lastName;
+            if (gender.Trim() == "Male")
+            {
+                rbMale.Checked = true;
+            }
+            else
+            {
+                rbFemale.Checked = true;
+            }
+            txtPhonenumber.Text = phoneNumber;
+            txtEmail.Text = email;
+            cbSalary.SelectedItem = salary;
+            cbTimeShedule.SelectedItem = timeSchedule;
+            txtJoinDate.Text = joinDate;
+        }
     }
 }

@@ -66,6 +66,7 @@ namespace Presentation.Forms.Manager
             this.btnViewFood.TabIndex = 1;
             this.btnViewFood.Text = "View Food";
             this.btnViewFood.UseVisualStyleBackColor = true;
+            this.btnViewFood.Click += new System.EventHandler(this.btnViewFood_Click);
             // 
             // btnAddFood
             // 

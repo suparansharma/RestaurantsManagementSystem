@@ -78,6 +78,7 @@ namespace Presentation.Forms.Admin
             this.dataGridViewEmployee.RowTemplate.Height = 25;
             this.dataGridViewEmployee.Size = new System.Drawing.Size(962, 216);
             this.dataGridViewEmployee.TabIndex = 0;
+            this.dataGridViewEmployee.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewEmployee_CellMouseDoubleClick);
             this.dataGridViewEmployee.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewEmployee_MouseDoubleClick);
             // 
             // panelviewemployeedata

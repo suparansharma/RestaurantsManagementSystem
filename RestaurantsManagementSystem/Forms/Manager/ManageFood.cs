@@ -37,5 +37,12 @@ namespace Presentation.Forms.Manager
             OpenChildForm(new AddFood());
             
         }
+
+
+
+        private void btnViewFood_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ViewFood());
+        }
     }
 }
