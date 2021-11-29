@@ -36,5 +36,10 @@ namespace Presentation.Forms.Manager
             OpenChildForm(new AddOrder());
             btnAddNewOrder.Enabled = false;
         }
+
+        private void btnViewOrder_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ViewOrder());
+        }
     }
 }

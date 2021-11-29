@@ -1,4 +1,5 @@
-﻿using RestaurantsManagementSystem;
+﻿using Presentation.Forms.Manager;
+using RestaurantsManagementSystem;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,6 +68,21 @@ namespace Presentation.Forms.Admin
         private void btnChef_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Managechef());
+        }
+
+        private void btnManageFood_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ManageFood());
+        }
+
+        private void btnManageOrder_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Order());
+        }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

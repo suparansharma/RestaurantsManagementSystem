@@ -166,7 +166,31 @@ namespace Database
             dataGridView.DataSource = dt;
         }
 
+        public Employee GetAllEmployeeByUserId(string userId)
+        {
+            string query = "Select  * FROM tblEmployees where userId = '" + userId + "' ";
+            SqlCommand commandd = GetCommand(query);
+            DataTable dt = Execute(commandd);
+            if (dt.Rows.Count > 0)
+            {
+                var fname = dt.Rows[0].Field<string>("firstName");
+                var lastName = dt.Rows[0].Field<string>("lastName");
+                var gender = dt.Rows[0].Field<string>("gender");
+                var phoneNumber = dt.Rows[0].Field<string>("phoneNumber");
+                var email = dt.Rows[0].Field<string>("email");
+                var joinDate = dt.Rows[0].Field<string>("joinDate");
+                var salary = dt.Rows[0].Field<int>("salary");
+                var userType = dt.Rows[0].Field<int>("userType");
+                var timeShedule = dt.Rows[0].Field<string>("timeShedule");
 
+                Employee employee = new Employee(userId, fname, lastName, gender, phoneNumber, email, joinDate, salary, userType, timeShedule);
+                return employee;
+            }
+            else
+            {
+                return null;
+            }
+        }
         public bool InsertFood(string foodName, string size, int price,string foodType, string description)
         {
             string sql = string.Format("insert into tblFood(foodName,size,price,foodType,description)" +
@@ -282,7 +306,7 @@ namespace Database
         }
         public bool InsertOrrder(string details, int total)
         {
-            string sql = string.Format("insert into tblOrders (details,totalPrice,dateTime)" +
+            string sql = string.Format("insert into tblOrder (details,totalPrice,dateTime)" +
                 "Values('{0}', '{1}', '{2}')", details, total, DateTime.Now.ToString());
             int rowsAffected = ExecuteComand(sql);
             if (rowsAffected > 0)
@@ -294,6 +318,18 @@ namespace Database
                 return false;
             }
 
+        }
+
+
+        public void GetAllOrder(DataGridView dataGridView)
+        {
+            string query = "Select  * FROM tblOrder  ";
+            SqlCommand commandd = GetCommand(query);
+            SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
+
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView.DataSource = dt;
         }
     }
 }

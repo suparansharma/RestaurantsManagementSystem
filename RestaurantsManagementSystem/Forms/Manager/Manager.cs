@@ -53,5 +53,10 @@ namespace Presentation.Forms.Manager
         {
             OpenChildForm(new Order());
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ManagerProfile(user));
+        }
     }
 }

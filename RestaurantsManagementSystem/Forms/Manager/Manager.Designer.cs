@@ -32,10 +32,11 @@ namespace Presentation.Forms.Manager
             this.panelManagerTop = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panelManagerLeft = new System.Windows.Forms.Panel();
+            this.btnOrder = new System.Windows.Forms.Button();
             this.btnManageFood = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panelManagerMain = new System.Windows.Forms.Panel();
-            this.btnOrder = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.panelManagerTop.SuspendLayout();
             this.panelManagerLeft.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +62,7 @@ namespace Presentation.Forms.Manager
             // 
             // panelManagerLeft
             // 
+            this.panelManagerLeft.Controls.Add(this.btnProfile);
             this.panelManagerLeft.Controls.Add(this.btnOrder);
             this.panelManagerLeft.Controls.Add(this.btnManageFood);
             this.panelManagerLeft.Controls.Add(this.btnDashboard);
@@ -69,6 +71,17 @@ namespace Presentation.Forms.Manager
             this.panelManagerLeft.Name = "panelManagerLeft";
             this.panelManagerLeft.Size = new System.Drawing.Size(200, 445);
             this.panelManagerLeft.TabIndex = 2;
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrder.Location = new System.Drawing.Point(0, 72);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(200, 36);
+            this.btnOrder.TabIndex = 4;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // btnManageFood
             // 
@@ -99,16 +112,16 @@ namespace Presentation.Forms.Manager
             this.panelManagerMain.Size = new System.Drawing.Size(766, 445);
             this.panelManagerMain.TabIndex = 3;
             // 
-            // btnOrder
+            // btnProfile
             // 
-            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrder.Location = new System.Drawing.Point(0, 72);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(200, 36);
-            this.btnOrder.TabIndex = 4;
-            this.btnOrder.Text = "Order";
-            this.btnOrder.UseVisualStyleBackColor = true;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProfile.Location = new System.Drawing.Point(0, 108);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(200, 36);
+            this.btnProfile.TabIndex = 5;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // Manager
             // 
@@ -136,5 +149,6 @@ namespace Presentation.Forms.Manager
         private System.Windows.Forms.Panel panelManagerMain;
         private System.Windows.Forms.Panel panelManagerTop;
         private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnProfile;
     }
 }

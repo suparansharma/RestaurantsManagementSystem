@@ -32,6 +32,7 @@ namespace Presentation.Forms.Admin
             this.panelAdminTop = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panelAdminLeft = new System.Windows.Forms.Panel();
+            this.btnManageOrder = new System.Windows.Forms.Button();
             this.btnManageFood = new System.Windows.Forms.Button();
             this.panelManageEmployee = new System.Windows.Forms.Panel();
             this.btnChef = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@ namespace Presentation.Forms.Admin
             // 
             // panelAdminTop
             // 
+            this.panelAdminTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panelAdminTop.Controls.Add(this.btnLogout);
             this.panelAdminTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAdminTop.Location = new System.Drawing.Point(0, 0);
@@ -65,6 +67,7 @@ namespace Presentation.Forms.Admin
             // 
             // panelAdminLeft
             // 
+            this.panelAdminLeft.Controls.Add(this.btnManageOrder);
             this.panelAdminLeft.Controls.Add(this.btnManageFood);
             this.panelAdminLeft.Controls.Add(this.panelManageEmployee);
             this.panelAdminLeft.Controls.Add(this.btnManageEmployee);
@@ -75,15 +78,31 @@ namespace Presentation.Forms.Admin
             this.panelAdminLeft.Size = new System.Drawing.Size(200, 422);
             this.panelAdminLeft.TabIndex = 1;
             // 
+            // btnManageOrder
+            // 
+            this.btnManageOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageOrder.Location = new System.Drawing.Point(0, 208);
+            this.btnManageOrder.Name = "btnManageOrder";
+            this.btnManageOrder.Size = new System.Drawing.Size(200, 36);
+            this.btnManageOrder.TabIndex = 4;
+            this.btnManageOrder.Text = "Manage Order";
+            this.btnManageOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageOrder.UseVisualStyleBackColor = true;
+            this.btnManageOrder.Click += new System.EventHandler(this.btnManageOrder_Click);
+            // 
             // btnManageFood
             // 
             this.btnManageFood.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageFood.Location = new System.Drawing.Point(0, 172);
             this.btnManageFood.Name = "btnManageFood";
             this.btnManageFood.Size = new System.Drawing.Size(200, 36);
             this.btnManageFood.TabIndex = 3;
             this.btnManageFood.Text = "Manage Food";
+            this.btnManageFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageFood.UseVisualStyleBackColor = true;
+            this.btnManageFood.Click += new System.EventHandler(this.btnManageFood_Click);
             // 
             // panelManageEmployee
             // 
@@ -103,6 +122,7 @@ namespace Presentation.Forms.Admin
             this.btnChef.Size = new System.Drawing.Size(200, 23);
             this.btnChef.TabIndex = 1;
             this.btnChef.Text = "Chef";
+            this.btnChef.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnChef.UseVisualStyleBackColor = true;
             this.btnChef.Click += new System.EventHandler(this.btnChef_Click);
             // 
@@ -114,28 +134,33 @@ namespace Presentation.Forms.Admin
             this.btnManager.Size = new System.Drawing.Size(200, 23);
             this.btnManager.TabIndex = 0;
             this.btnManager.Text = "Manager";
+            this.btnManager.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnManager.UseVisualStyleBackColor = true;
             this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
             // 
             // btnManageEmployee
             // 
             this.btnManageEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageEmployee.Location = new System.Drawing.Point(0, 36);
             this.btnManageEmployee.Name = "btnManageEmployee";
             this.btnManageEmployee.Size = new System.Drawing.Size(200, 36);
             this.btnManageEmployee.TabIndex = 1;
             this.btnManageEmployee.Text = "Manage Employee";
+            this.btnManageEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageEmployee.UseVisualStyleBackColor = true;
             this.btnManageEmployee.Click += new System.EventHandler(this.btnManageEmployee_Click);
             // 
             // btnDashboard
             // 
             this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.Location = new System.Drawing.Point(0, 0);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(200, 36);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = true;
             // 
             // panelAdminMain
@@ -154,8 +179,10 @@ namespace Presentation.Forms.Admin
             this.Controls.Add(this.panelAdminMain);
             this.Controls.Add(this.panelAdminLeft);
             this.Controls.Add(this.panelAdminTop);
+            this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Admin";
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.Admin_Load);
             this.panelAdminTop.ResumeLayout(false);
             this.panelAdminLeft.ResumeLayout(false);
             this.panelManageEmployee.ResumeLayout(false);
@@ -175,5 +202,6 @@ namespace Presentation.Forms.Admin
         private System.Windows.Forms.Button btnManageEmployee;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel panelAdminMain;
+        private System.Windows.Forms.Button btnManageOrder;
     }
 }

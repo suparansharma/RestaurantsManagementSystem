@@ -30,9 +30,9 @@ namespace Presentation.Forms.Manager
         private void InitializeComponent()
         {
             this.panelOrderBotoom = new System.Windows.Forms.Panel();
-            this.panelOrderMain = new System.Windows.Forms.Panel();
-            this.btnAddNewOrder = new System.Windows.Forms.Button();
             this.btnViewOrder = new System.Windows.Forms.Button();
+            this.btnAddNewOrder = new System.Windows.Forms.Button();
+            this.panelOrderMain = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelOrderBotoom.SuspendLayout();
             this.panelOrderMain.SuspendLayout();
@@ -48,15 +48,15 @@ namespace Presentation.Forms.Manager
             this.panelOrderBotoom.Size = new System.Drawing.Size(800, 58);
             this.panelOrderBotoom.TabIndex = 0;
             // 
-            // panelOrderMain
+            // btnViewOrder
             // 
-            this.panelOrderMain.Controls.Add(this.label1);
-            this.panelOrderMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelOrderMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.panelOrderMain.Location = new System.Drawing.Point(0, 0);
-            this.panelOrderMain.Name = "panelOrderMain";
-            this.panelOrderMain.Size = new System.Drawing.Size(800, 392);
-            this.panelOrderMain.TabIndex = 1;
+            this.btnViewOrder.Location = new System.Drawing.Point(296, 7);
+            this.btnViewOrder.Name = "btnViewOrder";
+            this.btnViewOrder.Size = new System.Drawing.Size(75, 23);
+            this.btnViewOrder.TabIndex = 1;
+            this.btnViewOrder.Text = "View Order";
+            this.btnViewOrder.UseVisualStyleBackColor = true;
+            this.btnViewOrder.Click += new System.EventHandler(this.btnViewOrder_Click);
             // 
             // btnAddNewOrder
             // 
@@ -68,14 +68,15 @@ namespace Presentation.Forms.Manager
             this.btnAddNewOrder.UseVisualStyleBackColor = true;
             this.btnAddNewOrder.Click += new System.EventHandler(this.btnAddNewOrder_Click);
             // 
-            // btnViewOrder
+            // panelOrderMain
             // 
-            this.btnViewOrder.Location = new System.Drawing.Point(296, 7);
-            this.btnViewOrder.Name = "btnViewOrder";
-            this.btnViewOrder.Size = new System.Drawing.Size(75, 23);
-            this.btnViewOrder.TabIndex = 1;
-            this.btnViewOrder.Text = "View Order";
-            this.btnViewOrder.UseVisualStyleBackColor = true;
+            this.panelOrderMain.Controls.Add(this.label1);
+            this.panelOrderMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelOrderMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panelOrderMain.Location = new System.Drawing.Point(0, 0);
+            this.panelOrderMain.Name = "panelOrderMain";
+            this.panelOrderMain.Size = new System.Drawing.Size(800, 392);
+            this.panelOrderMain.TabIndex = 1;
             // 
             // label1
             // 
