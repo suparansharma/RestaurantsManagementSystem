@@ -112,5 +112,10 @@ namespace Presentation.Forms.Manager
                 MessageBox.Show(" Delete Unsuccessfull & Try again");
             }
         }
+
+        private void ViewFood_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

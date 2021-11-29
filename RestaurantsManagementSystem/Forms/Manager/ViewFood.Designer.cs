@@ -244,6 +244,7 @@ namespace Presentation.Forms.Manager
             this.Controls.Add(this.dataGridViewFood);
             this.Name = "ViewFood";
             this.Text = "ViewFood";
+            this.Load += new System.EventHandler(this.ViewFood_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFood)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

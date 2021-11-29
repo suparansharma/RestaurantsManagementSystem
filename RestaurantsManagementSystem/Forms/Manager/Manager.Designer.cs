@@ -35,6 +35,7 @@ namespace Presentation.Forms.Manager
             this.btnManageFood = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panelManagerMain = new System.Windows.Forms.Panel();
+            this.btnOrder = new System.Windows.Forms.Button();
             this.panelManagerTop.SuspendLayout();
             this.panelManagerLeft.SuspendLayout();
             this.SuspendLayout();
@@ -56,9 +57,11 @@ namespace Presentation.Forms.Manager
             this.btnLogout.TabIndex = 0;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panelManagerLeft
             // 
+            this.panelManagerLeft.Controls.Add(this.btnOrder);
             this.panelManagerLeft.Controls.Add(this.btnManageFood);
             this.panelManagerLeft.Controls.Add(this.btnDashboard);
             this.panelManagerLeft.Dock = System.Windows.Forms.DockStyle.Left;
@@ -96,6 +99,17 @@ namespace Presentation.Forms.Manager
             this.panelManagerMain.Size = new System.Drawing.Size(766, 445);
             this.panelManagerMain.TabIndex = 3;
             // 
+            // btnOrder
+            // 
+            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrder.Location = new System.Drawing.Point(0, 72);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(200, 36);
+            this.btnOrder.TabIndex = 4;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -121,5 +135,6 @@ namespace Presentation.Forms.Manager
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel panelManagerMain;
         private System.Windows.Forms.Panel panelManagerTop;
+        private System.Windows.Forms.Button btnOrder;
     }
 }

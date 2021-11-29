@@ -225,6 +225,61 @@ namespace Database
                 return false;
             }
         }
+        //public int GetFoodPrice(string foodName, string size)
+        //{
+        //    string query = "Select price FROM TblFood where  foodName = '"+foodName+"' and Size = '"+size+"' ";
+        //    SqlCommand commandd = GetCommand(query);
+        //    SqlDataAdapter sda = new SqlDataAdapter(query, commandd.Connection);
+
+        //    DataTable dt = new DataTable();
+        //    if (dt.Rows.Count > 0)
+        //    {
+        //        var price = dt.Rows[0].Field<int>("Price");
+        //        return price;
+        //    }
+        //    else
+        //    {
+        //        return -1;
+        //    }
+
+        //}
+        public Food GetFoodById(int foodId)
+        {
+            string query = "Select * FROM TblFood where Id  = '" + foodId + "' ";
+            SqlCommand command = GetCommand(query);
+
+            DataTable dt = Execute(command);
+            if (dt.Rows.Count > 0)
+            {
+                var foodName = dt.Rows[0].Field<string>("foodName");
+                var size = dt.Rows[0].Field<string>("Size");
+                var price = dt.Rows[0].Field<int>("Price");
+                var foodType = dt.Rows[0].Field<string>("foodType");
+                var description = dt.Rows[0].Field<string>("description");
+                Food food = new Food(foodId, foodName, size, price, foodType, description);
+                return food;
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+        public void GetFoodCombo(ComboBox comboBox, string foodType)
+        {
+            DataRow dr;
+            string sql = "select * from TblFood where foodType = '"+ foodType +"' ";
+            SqlCommand command = GetCommand(sql);
+            SqlDataAdapter sda = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dr = dt.NewRow();
+            dr.ItemArray = new Object[] { 0, "--Select Food Name--" };
+            dt.Rows.InsertAt(dr, 0);
+            comboBox.ValueMember = "id";
+            comboBox.DisplayMember = "foodName";
+            comboBox.DataSource = dt;
+        }
 
     }
 }
