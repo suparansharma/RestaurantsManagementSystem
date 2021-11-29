@@ -1,6 +1,7 @@
 ﻿using Database;
 using Database.Entities;
 using Presentation.Forms.Admin;
+using Presentation.Forms.Manager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,9 @@ namespace RestaurantsManagementSystem
                 }
                 else if(user.UserType == (int)User.UserTypeEnum.Manager)
                 {
+                    Manager manager = new Manager(user);
+                    manager.Show();
+                    this.Hide();
 
                 }
             }

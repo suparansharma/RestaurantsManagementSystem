@@ -1,5 +1,4 @@
-﻿using Database.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,13 +10,16 @@ using System.Windows.Forms;
 
 namespace Presentation.Forms.Manager
 {
-    public partial class Manager : Form
+    public partial class AddFood : Form
     {
-        public User user;
-        public Manager(User user)
+        public AddFood()
         {
             InitializeComponent();
-            this.user = user;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
 
         private Form activeFrom = null;
@@ -28,16 +30,20 @@ namespace Presentation.Forms.Manager
             activeFrom = childForm;
             childForm.TopLevel = false;
             childForm.Dock = DockStyle.Fill;
-            panelManagerMain.Controls.Add(childForm);
-            panelManagerMain.Tag = childForm;
+            //panelManagerMain.Controls.Add(childForm);
+            //panelManagerMain.Tag = childForm;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.BringToFront();
             childForm.Show();
         }
 
-        private void btnManageFood_Click(object sender, EventArgs e)
+        private void btnAddFood_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ManageFood());
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }

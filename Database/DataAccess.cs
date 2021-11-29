@@ -167,5 +167,22 @@ namespace Database
         }
 
 
+        public bool InsertFood(string foodName, string size, string price, string description)
+        {
+            string sql = string.Format("insert into tblFood(foodName,size,price,description)" +
+                "Values('{0}', '{1}', '{2}','{3}')", foodName, size, price, description);
+            int rowsAffected = ExecuteComand(sql);
+            if (rowsAffected > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+
     }
 }
