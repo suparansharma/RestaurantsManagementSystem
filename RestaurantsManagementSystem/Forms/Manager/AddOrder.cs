@@ -19,7 +19,7 @@ namespace Presentation.Forms.Manager
         {
             InitializeComponent();
             btnPrint.Enabled = false;
-
+            txtTotalPrice.Enabled = false;
         }
 
         private void BtnAddOrder_Click(object sender, EventArgs e)
@@ -42,6 +42,8 @@ namespace Presentation.Forms.Manager
                 foodSize = "Big";
             }
             int price = food.Price;
+            int total = Int32.Parse(txtTotalPrice.Text) + price * Int32.Parse(quantity);
+            txtTotalPrice.Text = total.ToString();
             
             rtbOrders.AppendText("\n"+foodName + "           " + foodSize + "    " + quantity+ "   " + price + "\n");
         }
@@ -55,8 +57,30 @@ namespace Presentation.Forms.Manager
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            btnPrint.Enabled = true;
-            
+            rtbOrders.AppendText("\n Total Price" + txtTotalPrice.Text);
+            bool isInstert = dataAccess.InsertOrrder(rtbOrders.Text, Int32.Parse(txtTotalPrice.Text));
+            if (isInstert)
+            {
+                MessageBox.Show("Order Confirmed");
+                btnPrint.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Order Failed");
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("Resturant maangement Sytem", new Font("Times New Roman", 24, FontStyle.Bold), Brushes.DarkGray, new Point(50,25));
+            e.Graphics.DrawString(rtbOrders.Text, new Font("Times New Roman", 14, FontStyle.Regular), Brushes.DarkGray, new Point(50, 100));
+
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
         }
     }
 }

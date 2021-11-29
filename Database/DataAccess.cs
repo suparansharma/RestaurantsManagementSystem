@@ -280,6 +280,20 @@ namespace Database
             comboBox.DisplayMember = "foodName";
             comboBox.DataSource = dt;
         }
+        public bool InsertOrrder(string details, int total)
+        {
+            string sql = string.Format("insert into tblOrders (details,totalPrice,dateTime)" +
+                "Values('{0}', '{1}', '{2}')", details, total, DateTime.Now.ToString());
+            int rowsAffected = ExecuteComand(sql);
+            if (rowsAffected > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
+        }
     }
 }
