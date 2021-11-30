@@ -67,6 +67,7 @@ namespace Presentation.Forms.Admin
             // 
             // panelAdminLeft
             // 
+            this.panelAdminLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panelAdminLeft.Controls.Add(this.btnManageOrder);
             this.panelAdminLeft.Controls.Add(this.btnManageFood);
             this.panelAdminLeft.Controls.Add(this.panelManageEmployee);
@@ -80,28 +81,30 @@ namespace Presentation.Forms.Admin
             // 
             // btnManageOrder
             // 
+            this.btnManageOrder.BackColor = System.Drawing.Color.Aqua;
             this.btnManageOrder.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnManageOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageOrder.Location = new System.Drawing.Point(0, 208);
+            this.btnManageOrder.Location = new System.Drawing.Point(0, 155);
             this.btnManageOrder.Name = "btnManageOrder";
             this.btnManageOrder.Size = new System.Drawing.Size(200, 36);
             this.btnManageOrder.TabIndex = 4;
             this.btnManageOrder.Text = "Manage Order";
             this.btnManageOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageOrder.UseVisualStyleBackColor = true;
+            this.btnManageOrder.UseVisualStyleBackColor = false;
             this.btnManageOrder.Click += new System.EventHandler(this.btnManageOrder_Click);
             // 
             // btnManageFood
             // 
+            this.btnManageFood.BackColor = System.Drawing.Color.Aqua;
             this.btnManageFood.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnManageFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageFood.Location = new System.Drawing.Point(0, 172);
+            this.btnManageFood.Location = new System.Drawing.Point(0, 119);
             this.btnManageFood.Name = "btnManageFood";
             this.btnManageFood.Size = new System.Drawing.Size(200, 36);
             this.btnManageFood.TabIndex = 3;
             this.btnManageFood.Text = "Manage Food";
             this.btnManageFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageFood.UseVisualStyleBackColor = true;
+            this.btnManageFood.UseVisualStyleBackColor = false;
             this.btnManageFood.Click += new System.EventHandler(this.btnManageFood_Click);
             // 
             // panelManageEmployee
@@ -111,11 +114,12 @@ namespace Presentation.Forms.Admin
             this.panelManageEmployee.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelManageEmployee.Location = new System.Drawing.Point(0, 72);
             this.panelManageEmployee.Name = "panelManageEmployee";
-            this.panelManageEmployee.Size = new System.Drawing.Size(200, 100);
+            this.panelManageEmployee.Size = new System.Drawing.Size(200, 47);
             this.panelManageEmployee.TabIndex = 2;
             // 
             // btnChef
             // 
+            this.btnChef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnChef.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChef.Location = new System.Drawing.Point(0, 23);
             this.btnChef.Name = "btnChef";
@@ -123,11 +127,12 @@ namespace Presentation.Forms.Admin
             this.btnChef.TabIndex = 1;
             this.btnChef.Text = "Chef";
             this.btnChef.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChef.UseVisualStyleBackColor = true;
+            this.btnChef.UseVisualStyleBackColor = false;
             this.btnChef.Click += new System.EventHandler(this.btnChef_Click);
             // 
             // btnManager
             // 
+            this.btnManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnManager.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnManager.Location = new System.Drawing.Point(0, 0);
             this.btnManager.Name = "btnManager";
@@ -135,11 +140,12 @@ namespace Presentation.Forms.Admin
             this.btnManager.TabIndex = 0;
             this.btnManager.Text = "Manager";
             this.btnManager.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnManager.UseVisualStyleBackColor = true;
+            this.btnManager.UseVisualStyleBackColor = false;
             this.btnManager.Click += new System.EventHandler(this.btnManager_Click);
             // 
             // btnManageEmployee
             // 
+            this.btnManageEmployee.BackColor = System.Drawing.Color.Aqua;
             this.btnManageEmployee.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnManageEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnManageEmployee.Location = new System.Drawing.Point(0, 36);
@@ -148,11 +154,12 @@ namespace Presentation.Forms.Admin
             this.btnManageEmployee.TabIndex = 1;
             this.btnManageEmployee.Text = "Manage Employee";
             this.btnManageEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageEmployee.UseVisualStyleBackColor = true;
+            this.btnManageEmployee.UseVisualStyleBackColor = false;
             this.btnManageEmployee.Click += new System.EventHandler(this.btnManageEmployee_Click);
             // 
             // btnDashboard
             // 
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.Location = new System.Drawing.Point(0, 0);
@@ -161,10 +168,11 @@ namespace Presentation.Forms.Admin
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.UseVisualStyleBackColor = false;
             // 
             // panelAdminMain
             // 
+            this.panelAdminMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panelAdminMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAdminMain.Location = new System.Drawing.Point(200, 75);
             this.panelAdminMain.Name = "panelAdminMain";
